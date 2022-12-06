@@ -15,18 +15,9 @@ import sys
 
 def lonelyinteger(a):
     # Write your code here
-    temp = {}
-    for i in range(len(a)):
-        for j in range(len(a)):
-            if (i != j) and (a[i]==a[j]):
-                temp[i] = a[i]
-                temp[j] = a[j]
-    for i in range(len(a)):
-        if temp.get(i) is None:
-            return a[i]
-    
-        
-                
+    for e in a:
+        if a.count(e) == 1:
+            return e
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

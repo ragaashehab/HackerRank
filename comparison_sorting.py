@@ -15,13 +15,8 @@ import sys
 
 def countingSort(arr):
     # Write your code here
-    freq = {}
-    for n in range(100):
-        freq[n] = 0
-    for i in arr:
-        freq[i]+= 1
-    freqlst = freq.values()
-    return freqlst
+    return (arr.count(i) for i in range(100))
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
